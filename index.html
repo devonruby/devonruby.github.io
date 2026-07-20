@@ -2,157 +2,1052 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of a Business Intelligence Analyst skilled in Power BI, SQL, Tableau, and AWS." />
-  <title>Devon Ruby | Business Intelligence Analyst</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Devon Ruby, a business intelligence and analytics enablement professional specializing in Power BI, SQL, Power Apps, Power Automate, SharePoint, and healthcare analytics."
+  />
+  <meta name="author" content="Devon Ruby" />
+  <meta name="theme-color" content="#0b1f35" />
+  <meta property="og:title" content="Devon Ruby | Business Intelligence & Analytics Enablement" />
+  <meta
+    property="og:description"
+    content="Business intelligence, healthcare analytics, Power Platform solutions, workflow automation, and analytics enablement."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devonruby.github.io/" />
+  <meta property="og:image" content="https://devonruby.github.io/devon_ruby_profile.jpg" />
+  <title>Devon Ruby | Business Intelligence & Analytics Enablement</title>
+
   <style>
+    :root {
+      --navy-950: #071525;
+      --navy-900: #0b1f35;
+      --navy-800: #113252;
+      --blue-600: #1f70c1;
+      --blue-500: #2f85d3;
+      --teal-500: #1c9a8b;
+      --teal-100: #dff5f1;
+      --slate-900: #172333;
+      --slate-700: #425165;
+      --slate-500: #6b7788;
+      --slate-300: #cfd7e2;
+      --slate-200: #e2e8f0;
+      --slate-100: #f2f5f8;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(11, 31, 53, 0.10);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --max-width: 1140px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 88px;
     }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: var(--slate-900);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(47, 133, 211, 0.08), transparent 28rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background-color: #0d6efd;
-      color: white;
-      padding: 4rem 1rem;
-      text-align: center;
+
+    a {
+      color: inherit;
     }
-    .section-title {
-      margin-top: 2rem;
-      border-bottom: 2px solid #0d6efd;
-      padding-bottom: 0.5rem;
-      margin-bottom: 2rem;
+
+    img {
+      max-width: 100%;
     }
-    .project iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 1000;
+      padding: 0.7rem 1rem;
+      background: var(--white);
+      color: var(--navy-900);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
     }
-    footer {
-      background-color: #f8f9fa;
-      padding: 2rem 0;
-      text-align: center;
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(207, 215, 226, 0.72);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--blue-600), var(--teal-500));
+      box-shadow: 0 8px 20px rgba(31, 112, 193, 0.25);
       font-size: 0.9rem;
     }
-    .navbar {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--slate-700);
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--blue-600);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--navy-900);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 78% 22%, rgba(47, 133, 211, 0.38), transparent 28rem),
+        radial-gradient(circle at 20% 0%, rgba(28, 154, 139, 0.22), transparent 24rem),
+        linear-gradient(135deg, var(--navy-950), var(--navy-800));
+    }
+
+    .hero-grid {
+      min-height: 670px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      align-items: center;
+      gap: 4rem;
+      padding-block: 6rem 5rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0 0 1.2rem;
+      color: #b8e9e3;
+      font-size: 0.83rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--teal-500);
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+    }
+
+    .hero-title-accent {
+      display: block;
+      color: #7fd5ca;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 1.5rem 0 0;
+      color: #d9e5f0;
+      font-size: clamp(1.05rem, 2vw, 1.24rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      min-height: 48px;
+      padding: 0.75rem 1.15rem;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--navy-950);
+      background: var(--white);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+    }
+
+    .button-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .profile-panel {
+      position: relative;
+      justify-self: center;
+      width: min(100%, 340px);
+    }
+
+    .profile-frame {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.28);
+      transform: rotate(2deg);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      object-fit: cover;
+      object-position: center top;
+      transform: rotate(-2deg);
+    }
+
+    .profile-badge {
+      position: absolute;
+      left: -30px;
+      bottom: 28px;
+      max-width: 210px;
+      padding: 0.85rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      color: var(--white);
+      background: rgba(7, 21, 37, 0.88);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      font-size: 0.84rem;
+    }
+
+    .profile-badge strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      color: #7fd5ca;
+    }
+
+    .section {
+      padding-block: 5.5rem;
+    }
+
+    .section-muted {
+      background: var(--slate-100);
+      border-block: 1px solid var(--slate-200);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 2.3rem;
+    }
+
+    .section-kicker {
+      margin: 0 0 0.45rem;
+      color: var(--blue-600);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy-900);
+      font-size: clamp(2rem, 4vw, 3.15rem);
+    }
+
+    .section-heading p {
+      margin: 0.9rem 0 0;
+      color: var(--slate-700);
+      font-size: 1.06rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-copy p {
+      margin-top: 0;
+      color: var(--slate-700);
+      font-size: 1.05rem;
+    }
+
+    .value-list {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .value-item {
+      padding: 1.1rem 1.2rem;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: 0 10px 26px rgba(11, 31, 53, 0.05);
+    }
+
+    .value-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--navy-900);
+    }
+
+    .value-item span {
+      color: var(--slate-700);
+      font-size: 0.94rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-group {
+      padding: 1.35rem;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: 0 12px 28px rgba(11, 31, 53, 0.05);
+    }
+
+    .skill-group h3 {
+      margin: 0 0 0.85rem;
+      color: var(--navy-900);
+      font-size: 1.05rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.48rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 0.4rem 0.65rem;
+      border-radius: 999px;
+      color: var(--navy-800);
+      background: #eaf3fb;
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      padding: 1.55rem;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--blue-600), var(--teal-500));
+    }
+
+    .project-type {
+      display: inline-flex;
+      margin-bottom: 1rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      color: #0d6a60;
+      background: var(--teal-100);
+      font-size: 0.77rem;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      color: var(--navy-900);
+      font-size: 1.35rem;
+    }
+
+    .project-card p {
+      margin: 0.75rem 0 1rem;
+      color: var(--slate-700);
+    }
+
+    .project-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--slate-700);
+      font-size: 0.93rem;
+    }
+
+    .project-card li + li {
+      margin-top: 0.35rem;
+    }
+
+    .confidentiality-note {
+      margin-top: 1.4rem;
+      padding: 1rem 1.15rem;
+      border-left: 4px solid var(--teal-500);
+      border-radius: 0 12px 12px 0;
+      color: var(--slate-700);
+      background: var(--teal-100);
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: var(--slate-200);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 36px minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .timeline-dot {
+      position: relative;
+      z-index: 1;
+      width: 14px;
+      height: 14px;
+      margin: 1.35rem auto 0;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      background: var(--blue-600);
+      box-shadow: 0 0 0 2px var(--blue-600);
+    }
+
+    .timeline-card {
+      padding: 1.35rem 1.45rem;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: 0 10px 26px rgba(11, 31, 53, 0.05);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem 1rem;
+    }
+
+    .timeline-card h3 {
+      margin: 0;
+      color: var(--navy-900);
+      font-size: 1.15rem;
+    }
+
+    .timeline-date {
+      color: var(--blue-600);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .timeline-role {
+      margin: 0.25rem 0 0;
+      color: var(--slate-700);
+      font-weight: 750;
+    }
+
+    .timeline-card p:last-child {
+      margin-bottom: 0;
+      color: var(--slate-700);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 2rem;
+      padding: clamp(1.6rem, 5vw, 3.2rem);
+      border-radius: 28px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 90% 20%, rgba(127, 213, 202, 0.24), transparent 18rem),
+        linear-gradient(135deg, var(--navy-950), var(--navy-800));
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-card p {
+      max-width: 650px;
+      margin: 0.75rem 0 0;
+      color: #d9e5f0;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+
+    footer {
+      padding-block: 2rem;
+      color: var(--slate-500);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        padding-block: 5rem 4rem;
+      }
+
+      .profile-panel {
+        justify-self: start;
+        width: min(78vw, 320px);
+      }
+
+      .profile-badge {
+        left: 18px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        top: 64px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.7rem;
+        border: 1px solid var(--slate-200);
+        border-radius: 14px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 0.75rem;
+      }
+
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 14vw, 4rem);
+      }
+
+      .section {
+        padding-block: 4rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
     }
   </style>
 </head>
-<body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">BI Portfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#dashboards">Dashboards</a></li>
-        <li class="nav-item"><a class="nav-link" href="#aws">AWS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Devon Ruby home">
+        <span class="brand-mark" aria-hidden="true">DR</span>
+        <span>Devon Ruby</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Expertise</a></li>
+        <li><a href="#work">Selected Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Header -->
-<header id="about">
-  <div class="container text-center">
-    <img src="devon_ruby_profile.jpg" class="rounded-circle mb-3" alt="Profile Picture" width="150" height="150">
-    <h1 class="display-4">Devon Ruby</h1>
-    <p class="lead">Business Intelligence Analyst | Power BI | SQL | Tableau | AWS</p>
-    <a href="#contact" class="btn btn-light btn-lg mt-3">Get in Touch</a>
-  </div>
-</header>
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Business Intelligence · Analytics Enablement · Power Platform</p>
+        <h1>
+          Devon Ruby
+          <span class="hero-title-accent">Turning data into practical solutions.</span>
+        </h1>
+        <p class="hero-copy">
+          I connect business intelligence, healthcare operations, technical training, and
+          low-code development to help teams understand data, improve processes, and make
+          more informed decisions.
+        </p>
 
-<!-- Main Content -->
-<main class="container mt-5">
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
-
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Retail Sales Dashboard</h5>
-            <p class="card-text">Built in Power BI using DAX measures and slicers. Analyzes multi-region sales data for decision makers.</p>
-            <a href="PASTE-YOUR-REPORT-LINK" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">View Live</a>
-          </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="Devon_Ruby_Resume_2026.pdf" target="_blank" rel="noopener">
+            View résumé
+          </a>
+          <a class="button button-secondary" href="#work">
+            Explore selected work
+          </a>
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Customer Churn Analysis</h5>
-            <p class="card-text">SQL + Tableau project exploring patterns in churn across a telecom dataset. Includes model-ready output.</p>
-            <a href="PASTE-YOUR-LINK-HERE" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">View Details</a>
-          </div>
+      <div class="profile-panel">
+        <div class="profile-frame">
+          <img src="devon_ruby_profile.jpg" alt="Professional portrait of Devon Ruby" />
+        </div>
+        <div class="profile-badge">
+          <strong>8+ years of experience</strong>
+          Healthcare analytics, reporting, data operations, enablement, and automation
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Dashboards -->
-  <section id="dashboards" class="mt-5">
-    <h2 class="section-title">Interactive Dashboards</h2>
+  <main id="main-content">
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">About</p>
+          <h2>Technical capability with a strong focus on adoption.</h2>
+        </div>
 
-    <div class="project mb-4">
-      <h5>Power BI: Executive KPI Dashboard</h5>
-      <iframe src="PASTE-YOUR-POWER-BI-EMBED-LINK"></iframe>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              My background spans business intelligence, healthcare analytics, data operations,
+              technical training, and low-code solution development. I have experience building
+              Power BI and Tableau reporting solutions, writing SQL queries, defining KPIs,
+              validating data, documenting technical processes, and translating complex
+              information for non-technical audiences.
+            </p>
+            <p>
+              In my current work, I support hospice business development through analytics
+              education and growth enablement. I also develop solutions using Power Apps,
+              Power Automate, SharePoint, Microsoft 365, and Viva Connections.
+            </p>
+            <p>
+              My greatest strength is connecting the technical and human sides of analytics:
+              building useful solutions, explaining data clearly, improving technology adoption,
+              and helping teams make better-informed decisions.
+            </p>
+          </div>
+
+          <div class="value-list" aria-label="Professional strengths">
+            <div class="value-item">
+              <strong>Business intelligence</strong>
+              <span>Reporting, KPIs, visualization, SQL, data validation, and stakeholder requirements.</span>
+            </div>
+            <div class="value-item">
+              <strong>Solution development</strong>
+              <span>Power Apps, Power Automate, SharePoint, workflow design, and process improvement.</span>
+            </div>
+            <div class="value-item">
+              <strong>Analytics enablement</strong>
+              <span>Training, microlearning, user guidance, documentation, and data literacy.</span>
+            </div>
+            <div class="value-item">
+              <strong>Healthcare knowledge</strong>
+              <span>Home health, hospice, field operations, referrals, admissions, and growth analytics.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Expertise</p>
+          <h2>A blended analytics, automation, and enablement skill set.</h2>
+          <p>
+            This combination allows me to move from business need to technical solution and then
+            help the intended audience use it successfully.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Business Intelligence</h3>
+            <div class="tag-list">
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Power Query</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">KPI Development</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Data Validation</span>
+            </div>
+          </article>
+
+          <article class="skill-group">
+            <h3>Microsoft Power Platform</h3>
+            <div class="tag-list">
+              <span class="tag">Power Apps</span>
+              <span class="tag">Power Automate</span>
+              <span class="tag">SharePoint</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Viva Connections</span>
+              <span class="tag">Workflow Automation</span>
+              <span class="tag">Process Design</span>
+            </div>
+          </article>
+
+          <article class="skill-group">
+            <h3>Enablement & Operations</h3>
+            <div class="tag-list">
+              <span class="tag">Analytics Training</span>
+              <span class="tag">Microlearning</span>
+              <span class="tag">Technical Documentation</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">Change Enablement</span>
+              <span class="tag">Healthcare Analytics</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Selected Work</p>
+          <h2>Examples of the problems I solve.</h2>
+          <p>
+            Public summaries of enterprise work focused on analytics adoption, workflow efficiency,
+            and practical technology.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="project-type">Power Apps · Power Automate · SharePoint</span>
+            <h3>Field Coaching & Assessment Application</h3>
+            <p>
+              Designed a structured application experience for coaching, competency scoring,
+              narrative feedback, action planning, leadership review, and employee acknowledgement.
+            </p>
+            <ul>
+              <li>Role-aware workflow and guided assessment screens</li>
+              <li>SharePoint-backed data model and status tracking</li>
+              <li>Automated notifications, review steps, and acknowledgement flow</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Power BI · Training · Data Literacy</span>
+            <h3>Business Development Analytics Learning Program</h3>
+            <p>
+              Developed progressive analytics education that helps non-technical audiences interpret
+              performance reporting and connect metrics to day-to-day business decisions.
+            </p>
+            <ul>
+              <li>Foundational and advanced Power BI learning paths</li>
+              <li>Facilitator scripts, user guides, job aids, and microlearning</li>
+              <li>Coverage of liaison, account, referral, admission, and conversion metrics</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">SharePoint · Viva Connections · Microsoft 365</span>
+            <h3>Centralized Analytics & Resource Hub</h3>
+            <p>
+              Organized reporting tools, training content, business resources, and frequently used
+              applications into a clearer, audience-focused employee experience.
+            </p>
+            <ul>
+              <li>Information architecture and audience targeting</li>
+              <li>Centralized access through SharePoint and Viva Connections</li>
+              <li>User guidance designed for varying levels of technical comfort</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Power Automate · SharePoint · Process Improvement</span>
+            <h3>Training Completion & Acknowledgement Automation</h3>
+            <p>
+              Developed workflows that capture completions, validate duplicates, update tracking
+              records, and communicate status while reducing manual administration.
+            </p>
+            <ul>
+              <li>Duplicate checks and conditional processing</li>
+              <li>Multi-list record updates and completion tracking</li>
+              <li>Confirmation messages and administrative notifications</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="confidentiality-note">
+          These summaries intentionally omit confidential company information, internal screenshots,
+          proprietary data, and customer details.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Experience</p>
+          <h2>A career built across analytics, operations, and healthcare.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3>Amedisys</h3>
+                <span class="timeline-date">July 2025 – Present</span>
+              </div>
+              <p class="timeline-role">Business Development Data Analytics Trainer and Hospice Growth Enablement Specialist</p>
+              <p>
+                Support hospice business development through Power BI education, analytics adoption,
+                Power Platform solutions, workflow automation, SharePoint resources, and technical documentation.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3>HouseWorks LLC</h3>
+                <span class="timeline-date">August 2023 – April 2025</span>
+              </div>
+              <p class="timeline-role">Business Intelligence Analyst</p>
+              <p>
+                Developed Power BI dashboards and SQL reporting, performed data validation and system
+                testing, documented reporting processes, and collaborated with business and technical stakeholders.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3>BAYADA Home Health Care</h3>
+                <span class="timeline-date">July 2018 – August 2023</span>
+              </div>
+              <p class="timeline-role">Senior Associate, Data Operations Analyst</p>
+              <p>
+                Developed SQL queries and Tableau dashboards, defined KPIs, tested and validated business
+                information, documented data processes, and trained and mentored junior analysts.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <p class="section-kicker" style="color:#7fd5ca;">Contact</p>
+            <h2>Let’s connect.</h2>
+            <p>
+              Connect with me for conversations about business intelligence, healthcare analytics,
+              Power Platform solutions, automation, or analytics enablement.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:druby195@gmail.com">Email Devon</a>
+            <a
+              class="button button-secondary"
+              href="https://www.linkedin.com/in/devon-ruby/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/devonruby"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Devon Ruby. Built as a public professional portfolio.
     </div>
+  </footer>
 
-    <div class="project mb-4">
-      <h5>Tableau: Sales Forecast Dashboard</h5>
-      <iframe src="PASTE-YOUR-TABLEAU-EMBED-LINK"></iframe>
-    </div>
-  </section>
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-  <!-- AWS Work -->
-  <section id="aws" class="mt-5">
-    <h2 class="section-title">AWS Projects</h2>
+    toggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
 
-    <div class="mb-4">
-      <h5>ETL Pipeline with AWS Glue, Athena, and QuickSight</h5>
-      <p>
-        Designed a serverless ETL pipeline that processes S3-stored data using Glue jobs, queried via Athena, and visualized in QuickSight.
-        <br/>
-        <strong>Skills:</strong> AWS Glue, S3, Athena, QuickSight, IAM
-      </p>
-      <img src="https://your-diagram-link.com" class="img-fluid rounded" alt="ETL pipeline diagram">
-    </div>
-  </section>
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
 
-  <!-- Contact -->
-  <section id="contact" class="mt-5">
-    <h2 class="section-title">Contact Me</h2>
-    <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:you@example.com" target="_blank" rel="noopener noreferrer">druby195@gmail.com</a></p>
-    <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/devon-ruby/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/devon-ruby/</a></p>
-    <p><i class="bi bi-github"></i> GitHub: <a href="https://github.com/devonruby" target="_blank" rel="noopener noreferrer">https://github.com/devonruby</a></p>
-  </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="mt-5">
-  <p>&copy; 2025 Your Name. All rights reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  console.log("Portfolio loaded successfully.");
-</script>
-
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
